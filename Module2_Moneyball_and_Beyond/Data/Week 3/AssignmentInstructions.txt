@@ -1,0 +1,34 @@
+I. Data Preparation
+ Import packages pandas, matplotlib.pyplot, numpy and statsmodels.formula.api
+
+Read in “Master.csv” data (created from Week 2) 
+
+Create “Experience Squared” variable  
+
+Calculate variables for batting average, isolated power, and eye as defined above (for “eye” do not include IBB in walks)
+
+ Subset the data to only include seasons (SalYear) 1995-2015
+
+II. Running Regressions for Each Season
+Write a function to run the following regression for every season in the data: lnSal on batting average, isolated power, eye, plate appearances, experience, experience-squared, and positional fixed effects for free agents only
+
+Create a list to store regression results (note: index will have to be slightly adjusted to account for shorter timeframe)
+
+Run regression for each season in the data and store results
+
+Give each regression result a name which is the season it corresponds to
+
+Divide results into following eras:
+
+Pre-MB: 1995-2000
+
+Moneyball Era: 2001-2008
+
+Post-MB: 2009-2014
+
+6.  Generate result tables for each era (should contain regression results for each individual season within each era).  Make sure to include the R-squared and number of observations in the regression output.
+
+III. Running the Pooled Regression  
+Subset data to only include free agent players and add a “PreMB” dummy variable to your dataframe for seasons prior to 2004.  
+
+Run a pooled regression for free agent players using the format same model structure developed in your function in 6).  Your pooled regression should have the form: lnSal ~ (model from 6)) + Pre-MB*(model from 6))
